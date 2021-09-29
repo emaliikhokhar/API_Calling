@@ -1,25 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './NavBar.css'
+import { BsFilePost } from 'react-icons/bs';
+import { BiCommentDetail, BiFilm } from "react-icons/bi";
 
 const NavBar = () => {
     return (
         <div className="navbar-css">
-            <div className="navbar-heading">
-                <Link to="/posts">
-                    Posts
-                </Link>
-            </div>
-            <div className="navbar-heading">
-                <Link to="/comments">
-                    Comments
-                </Link>
-            </div>
-            <div className="navbar-heading">
-                <Link to="/albums">
-                    Albums
-                </Link>
-            </div>
+            <NavLink to="/posts" activeClassName="active">
+                <div className="navbar-heading">
+                    <BsFilePost />
+                </div>
+            </NavLink>
+            <NavLink to="/comments" activeClassName="active">
+                <div className="navbar-heading">
+                    <BiCommentDetail />
+                </div>
+            </NavLink>
+            <NavLink to="/albums" activeClassName="active">
+                <div className="navbar-heading">
+                    <BiFilm />
+                </div>
+            </NavLink>
         </div>
     )
 }

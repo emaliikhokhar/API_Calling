@@ -1,18 +1,27 @@
 .navbar-css {
-    width: 200px;
+    width: 150px;
     float: left;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin-top: 350px;
-    justify-content: center;
 }
 
 .navbar-heading {
-    margin-bottom: 35px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
     text-decoration: none;
     color: white;
+}
+
+.active {
+    width: 100px;
+    background-color: #3b414d;
+    margin-left: 25px;
+    border-radius: 10px;
 }
