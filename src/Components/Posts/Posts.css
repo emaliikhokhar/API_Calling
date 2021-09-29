@@ -1,0 +1,10 @@
+.navBar-and-body {
+    display: flex;
+}
+
+.body-of-posts {
+    background-color: #3b414d;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+}
