@@ -6,10 +6,12 @@ const Intro = () => {
     return (
         <div className="navBar-and-body">
             <div>
-                <NavBar/>
+                <NavBar />
             </div>
             <div className="body-of-intro">
-            Welcome to API Calling Project
+                <div>
+                    <h3>You can see all the API's from JSONPlaceholder</h3>
+                </div>
             </div>
         </div>
     )

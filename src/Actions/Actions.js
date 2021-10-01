@@ -29,3 +29,33 @@ export const Albums_Action = () => {
         })
     }
 }
+
+export const Photos_Action = () => {
+    return async (dispatch, getState) => {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/photos");
+        dispatch({
+            type: "PHOTOS_FROM_API",
+            payload: response.data
+        })
+    }
+}
+
+export const Todos_Action = () => {
+    return async (dispatch, getState) => {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/todos");
+        dispatch({
+            type: "TODOS_FROM_API",
+            payload: response.data
+        })
+    }
+}
+
+export const Users_Action = () => {
+    return async (dispatch, getState) => {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+        dispatch({
+            type: "USERS_FROM_API",
+            payload: response.data
+        })
+    }
+}
