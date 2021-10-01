@@ -30,8 +30,8 @@ const Photos = () => {
                             <td className="td">{elem.id}</td>
                             <td className="td">{elem.albumId}</td>
                             <td className="td">{elem.title}</td>
-                            <td className="td"><img src={elem.url}/></td>
-                            <td className="td"><img src={elem.thumbnailUrl}/></td>
+                            {/* <td className="td"><img src={elem.url}/></td> */}
+                            {/* <td className="td"><img src={elem.thumbnailUrl}/></td> */}
                         </tr>
                     })
                 }

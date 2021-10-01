@@ -32,7 +32,7 @@ export const Albums_Action = () => {
 
 export const Photos_Action = () => {
     return async (dispatch, getState) => {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/photos");
+        const response = await axios.get("https://jsonplaceholder.typicode.com/photos/");
         dispatch({
             type: "PHOTOS_FROM_API",
             payload: response.data
