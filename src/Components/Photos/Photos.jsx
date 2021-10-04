@@ -1,3 +1,4 @@
+import { miniSerializeError } from '@reduxjs/toolkit'
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Photos_Action } from '../../Actions/Actions.js'
@@ -25,13 +26,13 @@ const Photos = () => {
                     <td>Thumbnail</td>
                 </tr>
                 {
-                    list.map(elem => {
+                    list.slice(0,20).map(elem => {
                         return <tr>
                             <td className="td">{elem.id}</td>
                             <td className="td">{elem.albumId}</td>
                             <td className="td">{elem.title}</td>
-                            {/* <td className="td"><img src={elem.url}/></td> */}
-                            {/* <td className="td"><img src={elem.thumbnailUrl}/></td> */}
+                            <td className="td"><img src={elem.url}/></td>
+                            <td className="td"><img src={elem.thumbnailUrl}/></td>
                         </tr>
                     })
                 }

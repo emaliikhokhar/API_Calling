@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Post_Action } from '../../Actions/Actions.js'
 import NavBar from '../NavBar/NavBar.jsx'
@@ -8,9 +8,15 @@ const Posts = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(Post_Action())
-    })
+
+        
+    }, [])
     const postsData = useSelector(state => state?.postReducer)
     const list = postsData.postList;
+
+    if (!postsData) {
+        return <h2>Loading</h2>
+    }
 
     return (
         <div className="navBar-and-body">
