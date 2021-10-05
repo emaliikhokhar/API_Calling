@@ -1,6 +1,5 @@
 import axios from "axios"
 
-
 export const Post_Action = () => {
     return async (dispatch, getState) => {
         const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
